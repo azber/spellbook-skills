@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cloud Image Generation"
+  short_description: "Generate images with Volcengine Ark and Google Vertex AI image models."
+  default_prompt: "Use this skill to generate images with Volcengine Ark or Google Vertex AI based on user style, composition, provider, and model requirements."

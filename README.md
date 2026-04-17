@@ -1,6 +1,6 @@
 # spellbook-skills
 
-Personal collection of [Claude Code](https://docs.claude.com/en/docs/claude-code) skills. Each subdirectory is a self-contained skill with a `SKILL.md`.
+Personal collection of agent skills. Each subdirectory is a self-contained skill with a `SKILL.md`.
 
 ## Install
 
@@ -9,13 +9,19 @@ git clone https://github.com/<you>/spellbook-skills.git ~/spellbook-skills
 cd ~/spellbook-skills && ./install.sh
 ```
 
-`install.sh` symlinks every skill directory into `~/.claude/skills/`, so editing files in this repo updates the live skill. Restart Claude Code (or start a new session) to pick up changes.
+`install.sh` symlinks every skill directory into the active agent skill directory:
+
+- Codex: `$CODEX_HOME/skills` or `~/.codex/skills`
+- Claude Code: `~/.claude/skills`
+
+Editing files in this repo updates the live skill through the symlink. Start a new agent session after installation so the new skill is discovered.
 
 ## Skills
 
 | Name | Description | Requires |
 |---|---|---|
 | [seedance2](seedance2/) | Generate videos via Volcengine Ark Doubao Seedance 2.0 (text/image/video/audio → MP4) | `ARK_API_KEY` |
+| [ark-imagegen](ark-imagegen/) | Generate images via Volcengine Ark and Google Vertex AI image models (text prompt → URL or file) | `ARK_API_KEY` or Vertex credentials, `openai`, `google-genai` |
 
 ## Adding a new skill
 
